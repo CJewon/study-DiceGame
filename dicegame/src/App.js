@@ -1,8 +1,13 @@
-import BlueDice01 from "./img/dice-blue-1.svg";
-import RedDice01 from "./img/dice-red-1.svg";
+import MyDice from "./MyDice";
+import OtherDice from "./OtherDice";
 import css from "./css/App.css";
 import logo from "./img/logo.png";
+import { useState } from "react";
+
 function App() {
+  const [myDiceNum, setMyDiceNum] = useState(1);
+  const [otherDiceNum, setOtherDiceNum] = useState(1);
+
   return (
     <div class="App">
       <div>
@@ -16,7 +21,7 @@ function App() {
       <div class="App-boards">
         <div class="Board App-board">
           <h2 class="Board-heading">나</h2>
-          <img class="Dice" src={BlueDice01} alt="1" />
+          <MyDice></MyDice>
           <h2 class="Board-heading">기록</h2>
           <p></p>
           <h2 class="Board-heading">총점</h2>
@@ -24,7 +29,7 @@ function App() {
         </div>
         <div class="Board App-board">
           <h2 class="Board-heading">상대</h2>
-          <img class="Dice" src={RedDice01} alt="1" />
+          <OtherDice></OtherDice>
           <h2 class="Board-heading">기록</h2>
           <p></p>
           <h2 class="Board-heading">총점</h2>
