@@ -4,9 +4,17 @@ import BlueDice03 from "./img/dice-blue-3.svg";
 import BlueDice04 from "./img/dice-blue-4.svg";
 import BlueDice05 from "./img/dice-blue-5.svg";
 import BlueDice06 from "./img/dice-blue-6.svg";
-import React, { useState } from "react";
 
-export default function MyDice() {
-  const [myDice, setMyDice] = useState(BlueDice01);
-  return <img src={myDice} alt="" />;
+const MyDiceImgs = {
+  1: BlueDice01,
+  2: BlueDice02,
+  3: BlueDice03,
+  4: BlueDice04,
+  5: BlueDice05,
+  6: BlueDice06,
+};
+
+export default function MyDice({ value }) {
+  const diceImg = MyDiceImgs[value];
+  return <img src={diceImg} alt="1" />;
 }

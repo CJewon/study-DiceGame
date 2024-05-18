@@ -4,9 +4,17 @@ import RedDice03 from "./img/dice-red-3.svg";
 import RedDice04 from "./img/dice-red-4.svg";
 import RedDice05 from "./img/dice-red-5.svg";
 import RedDice06 from "./img/dice-red-6.svg";
-import React, { useState } from "react";
 
-export default function OtherDice() {
-  const [otherDice, setOtherDice] = useState(RedDice01);
-  return <img src={otherDice} alt="" />;
+const OtherDiceImgs = {
+  1: RedDice01,
+  2: RedDice02,
+  3: RedDice03,
+  4: RedDice04,
+  5: RedDice05,
+  6: RedDice06,
+};
+
+export default function OtherDice({ value }) {
+  const OtherDiceImg = OtherDiceImgs[value];
+  return <img src={OtherDiceImg} alt="" />;
 }
