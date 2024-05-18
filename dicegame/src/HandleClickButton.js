@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export default function HandleClickButton() {
   let ranNum = Math.floor(Math.random() * 6) + 1;
