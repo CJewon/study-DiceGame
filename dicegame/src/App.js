@@ -8,7 +8,7 @@ import { useState } from "react";
 function App() {
   const [myDiceNum, setMyDiceNum] = useState(1);
   const [otherDiceNum, setOtherDiceNum] = useState(1);
-  const [score, setScore] = useState(0);
+  const [totalScore, setTotalScore] = useState(0);
 
   function handleRandomDice() {
     setMyDiceNum(HandleClickButton);
@@ -18,7 +18,7 @@ function App() {
   function handleReset() {
     setMyDiceNum(1);
     setOtherDiceNum(1);
-    setScore(0);
+    setTotalScore(0);
   }
 
   return (
